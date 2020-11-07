@@ -70,3 +70,9 @@ select{
     position: absolute;
     right: 10%;
 }
+@media only screen and (max-width: 768px){
+    .product{
+        width: 30vw;
+        margin: 2.5%;
+    }
+}
