@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { mdiCartOutline } from '@mdi/js';
+import { mdiCartOutline, mdiArrowLeftCircle } from '@mdi/js';
+import Modal from 'react-modal';
 import Icon from '@mdi/react';
 import Cart from '../cart/cart';
 import './product.css';
 
 const Products = () => {
     const [state, setState] = useState(null);
+    const [modalIsOpen, setModalIsOpen ] = useState(false)
     const [refresh, setRefresh] = useState(0);
     const { createApolloFetch } = require('apollo-fetch');
     useEffect(() => {
@@ -52,6 +54,7 @@ const Products = () => {
         localStorage.setItem('products', JSON.stringify(formattedDataArray));
         let refreshState = refresh + 1
         setRefresh(refreshState)
+        setModalIsOpen(true)
     }
     return (
         <div>
@@ -63,13 +66,19 @@ const Products = () => {
                 </ul>
                 <div className="cart">
                     <p>Account</p>
-                    <Icon path={mdiCartOutline} title="Dashboard-icon" size={1} className="cart-icon" />
+                    <Icon path={mdiCartOutline} title="Dashboard-icon" size={1} className="cart-icon" onClick={() => setModalIsOpen(true)}/>
                 </div>
             </nav>
             <hr />
+            <Modal className="bg-modal" isOpen={modalIsOpen}>
             <div className="cart-down">
+            <div className="heading">
+                <Icon path={mdiArrowLeftCircle} title="Dashboard-icon" size={1} className="back-icon" onClick={() => setModalIsOpen(false)}/>
+                <p>YOUR CART</p>
+            </div>
                 <Cart />
             </div>
+            </Modal>
             <section className="top">
                 <div className="all-products">
                     <h2>All Products</h2>

@@ -1,6 +1,4 @@
 import React from 'react';
-import Icon from '@mdi/react';
-import { mdiArrowLeftCircle } from '@mdi/js';
 import './cart.css';
 
 const Cart = () => {
@@ -48,10 +46,6 @@ const Cart = () => {
     }
     return (
         <div className="cart-card">
-            <div className="heading">
-                <Icon path={mdiArrowLeftCircle} title="Dashboard-icon" size={1} className="back-icon" />
-                <p>YOUR CART</p>
-            </div>
             <div className="currency">
                 <select name="currency" className="select">
                     <option>USD</option>
@@ -75,8 +69,9 @@ const Cart = () => {
                 </div>
             </div>) :
                 <div>No Item in cart</div>}
+            <div className="bottom">
             <div className="total">
-                <hr />
+                <hr className="hr"/>
                 <div className="subtotal">
                     <p>Subtotal</p>
                     <p>${state && state.reduce((acc, curr) => {
@@ -87,6 +82,7 @@ const Cart = () => {
             <div className="subscription">
                 <button className="subscribe">MAKE THIS A SUBSCRIPTION (SAVE 20%)</button>
                 <button className="checkout">PROCEED TO CHECKOUT</button>
+            </div>
             </div>
         </div>
     )
