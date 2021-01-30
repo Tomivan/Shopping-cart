@@ -25,11 +25,11 @@ const Products = () => {
                 }`
         })
             .then(res => {
-                console.log(res.data);
+                console.log(res);
                 setState(res.data)
             })
             .catch(err => console.log('fetch error', err));
-    }, [refresh])
+    }, [])
 
     // localStorage.clear()
     function addToCart(data) {
