@@ -1,0 +1,1 @@
+This is an ecommerce application. The products are displayed on page load with an api call. The api provides product image, name and price. The application was built with React and styled with no libraries.

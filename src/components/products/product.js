@@ -93,8 +93,8 @@ const Products = () => {
             <section className="products">
                 {state && state.products.map(data => (<div className="product">
                     <img src={`${data.image_url}`} alt="product" className="product-image" />
-                    <p>{data.title}</p>
-                    <p>${data.price}</p>
+                    <p className="product-title">{data.title}</p>
+                    <p className="price">${data.price}</p>
                     <button className="add" onClick={() => addToCart(data)}>Add to cart</button>
                 </div>))}
             </section>

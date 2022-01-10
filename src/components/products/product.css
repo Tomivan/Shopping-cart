@@ -36,12 +36,19 @@ select{
     flex-wrap: wrap;
 }
 .product{
-    width: 30vw;
+    width: 18vw;
     margin-top: 5%;
+    margin-left: 6%;
 }
 .product-image{
-    width: 10vw;
-    height: 15vh;
+    width: 15vw;
+    height: 30vh;
+}
+.product-title{
+    text-align: center;
+}
+.price{
+    margin-left: 30%;
 }
 .bg-modal{
     width: 100%;
@@ -54,9 +61,10 @@ select{
     background: #000000;
     color: #ffffff;
     height: 5vh;
-    width: 10vw;
+    width: 8vw;
     border: none;
     border-radius: 5px;
+    margin-left: 15%;
 }
 .heading{
     display: flex;
@@ -75,17 +83,27 @@ select{
         margin-top: 7%;
     }
     .cart{
-        margin-left: -12%;
+        margin-left: -15%;
         margin-top: 12%;
+    }
+    .top{
+        justify-content: space-between;
     }
     select{
         margin-top: 55%;
+        margin-left: -100%;
     }
     .product{
-        width: 50vw;
-        margin: 2.5%;
+        width: 80vw;
+    }
+    .product-image{
+        width: 70vw;
+        margin-left: 10%;
+    }
+    .price{
+        margin-left: 50%;
     }
     .add{
-        width: 30vw;
+        width: 68vw;
     }
 }
