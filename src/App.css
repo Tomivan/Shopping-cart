@@ -1,0 +1,17 @@
+.App{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+@media screen and (max-width: 768px){
+    .App{
+        width: 98%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .App{
+        width: 98%;
+    }
+}

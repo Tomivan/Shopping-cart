@@ -5,7 +5,7 @@
 .cart{
     display: flex;
     justify-content: space-between;
-    margin-left: 75%;
+    margin-left: 55%;
     margin-top: 1%;
 }
 ul{
@@ -36,19 +36,19 @@ select{
     flex-wrap: wrap;
 }
 .product{
-    width: 18vw;
+    width: 13vw;
     margin-top: 5%;
     margin-left: 6%;
 }
 .product-image{
-    width: 15vw;
-    height: 30vh;
+    width: 10vw;
+    height: 20vh;
 }
 .product-title{
     text-align: center;
 }
 .price{
-    margin-left: 30%;
+    margin-left: 40%;
 }
 .bg-modal{
     width: 100%;
@@ -105,5 +105,21 @@ select{
     }
     .add{
         width: 68vw;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .product{
+        width: 25vw;
+    }
+    .product-image{
+        width: 25vw;
+        margin-right: 5%;
+    }
+    .price{
+        margin-left: 50%;
+    }
+    .add{
+        width: 23vw;
     }
 }
